@@ -14,7 +14,7 @@ dir_count = 0
 def tree_generate(path, symbol):
     global dir_count
     global file_count
-    all_children = sorted([c for c in os.listdir(path) if not c.startswith('.')])
+    all_children = sorted([c for c in os.listdir(path) if not c.startswith('.')], key=lambda s: s.strip('_').lower())
     end_file = 0
     num_children = 0
     for children in all_children:
@@ -35,7 +35,7 @@ def tree_generate(path, symbol):
         num_children = num_children + 1
 
 if __name__ == '__main__':
-    dir_path="."
+    dir_path = "."
     if(len(sys.argv) == 2):
         dir_path = sys.argv[1]
     print(dir_path)

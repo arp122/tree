@@ -35,12 +35,11 @@ def tree_generate(path, symbol):
         num_children = num_children + 1
 
 if __name__ == '__main__':
-        # just for demo
-    #subprocess.run(['tree'] + sys.argv[1:])
     if(len(sys.argv) == 2):
         dir_path = sys.argv[1]
     else:
         dir_path = "."
     print(dir_path)
     tree_generate(dir_path, "")
+    print()
     print(str(dir_count) + " directories, " + str(file_count) + " files")

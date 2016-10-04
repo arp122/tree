@@ -3,10 +3,10 @@ import subprocess
 import sys
 import os
 
-indent = "?~T~B   "
+indent = "│   "
 indent_done = "    "
-child_branch = "?~T~\?~T~@?~T~@ "
-child_branch_done = "?~T~T?~T~@?~T~@ "
+child_branch = "├── "
+child_branch_done = "└── "
 file_count = 0
 dir_count = 0
 

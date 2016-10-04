@@ -3,10 +3,10 @@ import subprocess
 import sys
 import os
 
-indent = '│   '
+indent = u'│   '.encode('UTF-8').decode('latin-1')
 indent_done = '    '
-child_branch = '├── '
-child_branch_done = '└── '
+child_branch = u'├── '.encode('UTF-8').decode('latin-1')
+child_branch_done = u'└── '.encode('UTF-8').decode('latin-1')
 file_count = 0
 dir_count = 0
 
@@ -18,12 +18,11 @@ def tree_generate(path, symbol):
     end_file = 0
     num_children = 0
     for children in all_children:
-        if(num_children < len(all_children) - 1):
+        if(num_children < (len(all_children) - 1)):
             print(symbol + child_branch + str(children))
         else:
-            end_flile = 1
+            end_file = 1
             print(symbol + child_branch_done + str(children))
-
         if (os.path.isdir(os.path.join(path, children))):
             dir_count = dir_count + 1
             if(end_file == 1):

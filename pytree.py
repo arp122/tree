@@ -3,10 +3,10 @@ import subprocess
 import sys
 import os
 
-indent = u'│   '.encode('UTF-8').decode('latin-1')
+indent = '│   '
 indent_done = '    '
-child_branch = u'├── '.encode('UTF-8').decode('latin-1')
-child_branch_done = u'└── '.encode('UTF-8').decode('latin-1')
+child_branch = '├── '
+child_branch_done = '└── '
 file_count = 0
 dir_count = 0
 

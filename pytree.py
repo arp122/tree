@@ -43,4 +43,4 @@ if __name__ == '__main__':
         dir_path = "."
     print(dir_path)
     tree_generate(dir_path, "")
-    print(str(dir_count) + " directorie, " + str(file_count) + " files")
+    print(str(dir_count) + " directories, " + str(file_count) + " files")
